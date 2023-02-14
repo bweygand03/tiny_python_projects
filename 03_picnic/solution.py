@@ -13,7 +13,7 @@ def get_args():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('item',
-                        metavar='str',
+                        metavar='things',
                         nargs='+',
                         help='Item(s) to bring')
 
@@ -45,8 +45,8 @@ def main():
         items[-1] = 'and ' + items[-1]
         bringing = ', '.join(items)
 
-    print('You are bringing {}.'.format(bringing))
-
+    print(f'You are bringing {bringing}.')
+    print(__name__)
 
 # --------------------------------------------------
 if __name__ == '__main__':
